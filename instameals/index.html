@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instameals — Turn Food Reels into Recipes & Meal Plans</title>
+  <meta name="description" content="Save Instagram food reels as complete recipes with ingredients, nutrition, and steps. AI builds your daily meal plan automatically.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #DAF0E7;
+      background: #01110D;
+      line-height: 1.7;
+    }
+    .hero {
+      text-align: center;
+      padding: 80px 24px 60px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .logo {
+      font-size: 48px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #D0FE6F;
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+    .tagline {
+      font-size: 14px;
+      color: #9BB0A8;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+    .hero h1 {
+      font-size: 40px;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+    }
+    .hero h1 span { color: #D0FE6F; }
+    .hero p {
+      font-size: 18px;
+      color: #9BB0A8;
+      max-width: 480px;
+      margin: 0 auto 40px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #D0FE6F, #85AE27);
+      color: #1A2700;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 16px 40px;
+      border-radius: 9999px;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .cta-btn:hover { transform: scale(1.05); }
+
+    .features {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    .feature {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      margin-bottom: 40px;
+    }
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      background: #0A241E;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .feature h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #DAF0E7;
+      margin-bottom: 4px;
+    }
+    .feature p {
+      font-size: 16px;
+      color: #9BB0A8;
+    }
+
+    .steps {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+    .steps h2 {
+      font-size: 32px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 40px;
+      letter-spacing: -0.5px;
+    }
+    .steps h2 span { color: #D0FE6F; }
+    .step {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      margin-bottom: 32px;
+    }
+    .step-num {
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+      background: linear-gradient(135deg, #D0FE6F, #85AE27);
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #1A2700;
+      font-size: 16px;
+    }
+    .step h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #DAF0E7;
+      margin-bottom: 4px;
+    }
+    .step p {
+      font-size: 15px;
+      color: #9BB0A8;
+    }
+
+    .bottom-cta {
+      text-align: center;
+      padding: 40px 24px 80px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .bottom-cta h2 {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    .bottom-cta h2 span { color: #D0FE6F; }
+    .bottom-cta p {
+      font-size: 16px;
+      color: #9BB0A8;
+      margin-bottom: 32px;
+    }
+
+    .footer {
+      border-top: 1px solid #0A241E;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer a {
+      color: #9BB0A8;
+      text-decoration: none;
+      font-size: 14px;
+      margin-right: 16px;
+    }
+    .footer a:hover { color: #D0FE6F; }
+    .footer .copy {
+      font-size: 14px;
+      color: #9BB0A8;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 28px; }
+      .logo { font-size: 36px; }
+      .steps h2 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="logo">Instameals</div>
+    <div class="tagline">Reels to Curated Meals</div>
+    <h1>Turn Food Reels into <span>Recipes & Meal Plans</span></h1>
+    <p>Save any Instagram food reel and our AI instantly extracts the full recipe — ingredients, steps, nutrition, and prep time. Then it builds your daily meal plan.</p>
+    <a href="https://apps.apple.com/app/id6760283723" class="cta-btn">Download on the App Store</a>
+  </div>
+
+  <div class="steps">
+    <h2>How It <span>Works</span></h2>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div>
+        <h3>Find a food reel you love</h3>
+        <p>Open any recipe or cooking reel on Instagram or YouTube.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div>
+        <h3>Share to Instameals</h3>
+        <p>Tap Share and select the Instameals icon. That's it — one tap.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div>
+        <h3>AI does the rest</h3>
+        <p>We extract ingredients, cooking steps, nutrition facts, and prep time automatically.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div>
+        <h3>Your meal plan builds itself</h3>
+        <p>Saved recipes become part of your personalized daily meal plan — balanced and ready to cook.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon">🧠</div>
+      <div>
+        <h3>AI Recipe Extraction</h3>
+        <p>Advanced AI analyzes any food reel and produces a complete, structured recipe with quantities, steps, and nutrition estimates.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📋</div>
+      <div>
+        <h3>Smart Meal Planning</h3>
+        <p>Auto-generated daily plans balanced across breakfast, lunch, and dinner. Shuffle any meal with a swipe. Set dietary preferences and the AI adapts.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📊</div>
+      <div>
+        <h3>Nutrition at a Glance</h3>
+        <p>Calories, protein, carbs, and fat — estimated for every recipe. Track your daily intake without manual logging.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📚</div>
+      <div>
+        <h3>Your Personal Cookbook</h3>
+        <p>Every reel you save adds to your collection. Browse by meal type, search by name, and revisit any recipe anytime.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-cta">
+    <h2>Your feed is full of <span>great meals.</span><br>Now you can actually make them.</h2>
+    <p>Free for 7 days. No credit card required.</p>
+    <a href="https://apps.apple.com/app/id6760283723" class="cta-btn">Get Instameals Free</a>
+  </div>
+
+  <div class="footer">
+    <div>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-use.html">Terms of Use</a>
+      <a href="support.html">Support</a>
+      <a href="mailto:arunimarai31@gmail.com">Contact</a>
+    </div>
+    <div class="copy">Instameals &copy; 2026</div>
+  </div>
+
+</body>
+</html>
